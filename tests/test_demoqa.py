@@ -21,7 +21,7 @@ def test_open():
     browser.element("#subjectsInput").type("Eng").press_enter()
     browser.element('#hobbies-checkbox-2').perform(command.js.scroll_into_view)
     browser.element('[for="hobbies-checkbox-2"]').click()
-    browser.element('#uploadPicture').send_keys(os.getcwd() + "/download.jpeg")
+    browser.element('#uploadPicture').send_keys(os.getcwd() + os.path.sep + "download.jpeg")
     browser.element('#currentAddress').type("Earth_planet")
     browser.all("[id^=google_ads_iframe]").perform(command.js.remove)
     browser.element('#state').click()
